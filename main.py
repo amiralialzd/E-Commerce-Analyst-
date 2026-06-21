@@ -27,13 +27,13 @@ df_Products=pd.read_sql(query,engine)
 query= """select * from Order_Items """
 df_Order_Items=pd.read_sql(query,engine)
 
-# print(f"customer table {df_Customers}"
-#        f"\n-------------------------------\n"
-#        f"Product table {df_Products}"
-#        f"\n-------------------------------\n"
-#        f"Order table {df_Orders}"
-#        f"\n-------------------------------\n"
-#        f"Order_Items table{df_Order_Items}")
+print(f"customer table {df_Customers}"
+       f"\n-------------------------------\n"
+       f"Product table {df_Products}"
+       f"\n-------------------------------\n"
+       f"Order table {df_Orders}"
+       f"\n-------------------------------\n"
+       f"Order_Items table{df_Order_Items}")
 
 
 
@@ -205,21 +205,21 @@ print(c_more_than_avg)
 #customers more than average
 
 
-# plt.plot(monthly_trend["Months"],monthly_trend["REVENUE_PER_MONTH"],marker="o")
-# plt.title("Monthly Revenue chart ")
-# plt.xlabel("Months")
-# plt.ylabel("Revenue per Month")
-# plt.show()
-# plt.close()
+plt.plot(monthly_trend["Months"],monthly_trend["REVENUE_PER_MONTH"],marker="o")
+plt.title("Monthly Revenue chart ")
+plt.xlabel("Months")
+plt.ylabel("Revenue per Month")
+plt.show()
+plt.close()
 
 #Using bar plot to show revenue over each month
 
-# sns.barplot(x=df_Products["P_name"],y=df_Products["TOTAL_REVENUE"])
-# plt.title("Products Revenue chart ")
-# plt.xlabel("Products Name")
-# plt.ylabel("Revenue per Product")
-# plt.show()
-# plt.close()
+sns.barplot(x=df_Products["P_name"],y=df_Products["TOTAL_REVENUE"])
+plt.title("Products Revenue chart ")
+plt.xlabel("Products Name")
+plt.ylabel("Revenue per Product")
+plt.show()
+plt.close()
 
 
 #Using bar plot to show revenue for each product
@@ -239,8 +239,8 @@ GROUP BY c.Id, c.F_name,c.L_name"""
 
 customer_category=pd.read_sql(query, engine)
 
-# plt.pie(customer_category["TOTAL_REVENUE"],labels=customer_category["FULL_NAME"])
-# plt.show()
+plt.pie(customer_category["TOTAL_REVENUE"],labels=customer_category["FULL_NAME"])
+plt.show()
 
 #Using pie chart to visualize each customer total revenue
 
